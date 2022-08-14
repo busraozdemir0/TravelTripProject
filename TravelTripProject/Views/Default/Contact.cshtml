@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>WeBlog | İletişim</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/webtatil/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/webtatil/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+    <div class="contact">
+        <div class="wrap">
+            <div class="contact-top">
+                <h3>İletişim</h3>
+                <p>Bize Ulaşın</p>
+            </div>
+            <div class="form">
+                <form class="cmxform" id="contactForm" method="post">
+                    <div>
+                        <input type="text" class="textbox" value="Ad:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+                    </div>
+                    <div>
+                        <input type="text" class="textbox" value="E-Mail:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+                    </div>
+                    <div>
+                        <input type="text" class="textbox" value="Konu:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+                    </div>
+                    <div>
+                        <p><span class="read">Gönder</span></p>
+                    </div>
+                </form>
+            </div>
+            <div class="form1">
+                <div>
+                    <textarea value="Mesajınız:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message:</textarea>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="contact-bottom">
+                <div class="contact-left">
+                    <div class="contact-add">
+                        <h3>Adres</h3>
+                        <p>Merkez Doğanlı Köyü | Düzce, Türkiye</p>
+                    </div>
+                    <div class="contact-add">
+                        <h3>İletişim Bilgileri</h3>
+                        <p>E-Mail: <a href="mailto:busraozdemir8161@gmail.com">  busraozdemir8161@gmail.com</a></p>
+                        <p>Instagram : <a href="https://z-p15.www.instagram.com/busra.0zdemir/?hl=tr"> busra.0zdemir</a></p>
+                        <p>Twitter : <a href="https://twitter.com/busraozdemiir"> busraozdemiir</a></p>
+                        <p>LinkedIn : <a href="https://www.linkedin.com/in/b%C3%BC%C5%9Fra-%C3%B6zdemir-b4672b235/"> Büşra Özdemir</a></p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+

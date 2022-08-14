@@ -1,0 +1,18 @@
+﻿namespace TravelTripProject.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class mig_addadmin_column_email : DbMigration
+    {
+        public override void Up()
+        {
+            AddColumn("dbo.Admins", "Email", c => c.String());
+        }
+        
+        public override void Down()
+        {
+            DropColumn("dbo.Admins", "Email");
+        }
+    }
+}

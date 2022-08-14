@@ -22,28 +22,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="banner-left">
                         <div class="con-text">
                             <div class="grid1-img">
-                                <img src="~/webtatil/images/glass.png" alt="">
-                            </div>
-                            <div class="grid1-desc">
-                                <p>Restaurantlar</p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="con-text">
-                            <div class="grid1-img">
                                 <img src="~/webtatil/images/flight.png" alt="">
                             </div>
                             <div class="grid1-desc">
-                                <p>Uçuşlar</p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="con-text">
-                            <div class="grid1-img">
-                                <img src="~/webtatil/images/group.png" alt="">
-                            </div>
-                            <div class="grid1-desc">
-                                <p>Yapılacak Şeyler</p>
+                                <a href="https://www.google.com/flights?sxsrf=ALiCzsb_dmG8z1GmqptjNCwZjQgxLpGFFw%3A1660482391091&source=flun&uitype=cuA_&hl=tr&gl=tr&curr=TRY&tfs=CAEQARobEgoyMDIyLTA4LTMwag0IAhIJL20vMDk5NDltGhsSCjIwMjItMDktMDNyDQgCEgkvbS8wOTk0OW16ZENqUklNalJJY2xOcWJXMTZZVkZCU1VaalVIZENSeTB0TFMwdExTMHRMUzFzWm5Sd04wRkJRVUZCUjB3ME9ERmpSSEJFTlVGQkVnRTVHZ3NJL0tVS0VBSWFBMVJTV1RnRGNMNUo%3D&ved=2ahUKEwjCoM74ssb5AhUMtKQKHUGDDcQQlhd6BAhREAw"><p>Uçuşlar</p></a>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -52,10 +34,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <img src="~/webtatil/images/key.png" alt="">
                             </div>
                             <div class="grid1-desc">
-                                <p>Araba Kiralama</p>
+                                <a href="https://www.rentalcars.com/?affiliateCode=google&preflang=tr&label=generic-W6prF7S6ZFVmqG52hS2y5wS244490004908&ws=&ppc_placement=&ppc_target=&ppc_param1=&ppc_param2=&aceid=&adposition=&ppc_network=g&feeditemid=&ppc_targetid=kwd-264628378&loc_physical_ms=21577&loc_interest_ms=&ppc_device=c&ppc_devicemodel=&gclid=Cj0KCQjwuuKXBhCRARIsAC-gM0hZakY_kICdQrACkSjh4NffYxmZoNJZAd-OUDLRSVGfepcs3IzlFusaAhU5EALw_wcB"> <p>Araba Kiralama</p></a>
                             </div>
                             <div class="clear"></div>
                         </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/webtatil/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <a href="https://www.tripadvisor.com.tr/Restaurants"><p>Restaurantlar</p></a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/webtatil/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <a href="https://www.hurriyet.com.tr/kelebek/tatilde-ne-yapmali-iste-tatilde-yapilabilecek-en-guzel-seyler-29471569"><p>Yapılacak Şeyler</p></a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
                         <div class="clear"></div>
                     </div>
                     <div class="header_bottom_right_images">
@@ -65,9 +66,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 @foreach (var x in Model)
                                 {
                                   <li><img src="@x.BlogImage" style="width:650px;height:365px;" alt=""></li>
-                                    @*<li><img src="~/webtatil/images/img2.jpg" alt=""></li>
-                                        <li><img src="~/webtatil/images/img3.jpg" alt=""></li>
-                                        <li><img src="~/webtatil/images/img4.jpg" alt=""></li>*@
                                 }
                             </ul>
                         </div>
@@ -98,8 +96,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
     </div>
-
 </body>
 </html>
-
-

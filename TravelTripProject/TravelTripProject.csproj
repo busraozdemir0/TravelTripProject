@@ -132,8 +132,13 @@
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208141125009_mig_addadmin_column_email.cs" />
+    <Compile Include="Migrations\202208141125009_mig_addadmin_column_email.designer.cs">
+      <DependentUpon>202208141125009_mig_addadmin_column_email.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Siniflar\Admin.cs" />
@@ -178,6 +183,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="weblogin\css\style.css" />
+    <Content Include="weblogin\images\b4.jpg" />
+    <Content Include="weblogin\index.html" />
+    <Content Include="weblogin\w3layouts-License.txt" />
     <Content Include="webtatil\about.html" />
     <Content Include="webtatil\contact.html" />
     <Content Include="webtatil\css\slider.css" />
@@ -197,6 +206,7 @@
     <Content Include="webtatil\images\img2.jpg" />
     <Content Include="webtatil\images\img3.jpg" />
     <Content Include="webtatil\images\img4.jpg" />
+    <Content Include="webtatil\images\Instagram-Icon.png" />
     <Content Include="webtatil\images\key.png" />
     <Content Include="webtatil\images\link1-bg.gif" />
     <Content Include="webtatil\images\logo.png" />
@@ -258,6 +268,11 @@
     <Content Include="Views\Blog\YorumYap.cshtml" />
     <Content Include="Views\Admin\YorumListesi.cshtml" />
     <Content Include="Views\Admin\YorumGetir.cshtml" />
+    <Content Include="weblogin\fonts\Asap-Regular.ttf" />
+    <Content Include="weblogin\fonts\Audiowide-Regular.ttf" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\Register.cshtml" />
+    <Content Include="Views\Default\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -274,6 +289,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202208141125009_mig_addadmin_column_email.resx">
+      <DependentUpon>202208141125009_mig_addadmin_column_email.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
