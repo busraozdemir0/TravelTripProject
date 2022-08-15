@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using TravelTripProject.Models.Siniflar;
@@ -23,11 +25,11 @@ namespace TravelTripProject.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult YeniBlog(Blog b)
+        public ActionResult YeniBlog(Blog blog)
         {
-            c.Blogs.Add(b);
+            c.Blogs.Add(blog);
             c.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Admin");
         }
         public ActionResult BlogSil(int id)
         {
@@ -36,11 +38,14 @@ namespace TravelTripProject.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult BlogGetir(int id)
+
+        [HttpGet]
+        public ActionResult BlogGuncelle(int id)
         {
             var bl = c.Blogs.Find(id);
-            return View("BlogGetir", bl);
+            return View("BlogGuncelle", bl);
         }
+        [HttpPost]
         public ActionResult BlogGuncelle(Blog blog)
         {
             var blg = c.Blogs.Find(blog.ID);
@@ -76,6 +81,18 @@ namespace TravelTripProject.Controllers
             yrm.Yorum = yorumlar.Yorum;
             c.SaveChanges();
             return RedirectToAction("YorumListesi");
+        }
+        public ActionResult Contact()
+        {
+            var iletisim = c.İletisims.ToList();
+            return View(iletisim);
+        }
+        public ActionResult ContactDelete(int id)
+        {
+            var iletisimsil = c.İletisims.Find(id);
+            c.İletisims.Remove(iletisimsil);
+            c.SaveChanges();
+            return RedirectToAction("Contact");
         }
 
     }

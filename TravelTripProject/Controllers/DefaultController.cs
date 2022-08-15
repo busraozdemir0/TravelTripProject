@@ -44,8 +44,16 @@ namespace TravelTripProject.Controllers
             var deger = c.Blogs.Take(3).OrderByDescending(x=>x.ID).ToList();
             return PartialView(deger);
         }
+        [HttpGet]
         public ActionResult Contact()
         {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Contact(İletisim iletisim)
+        {
+            c.İletisims.Add(iletisim);
+            c.SaveChanges();
             return View();
         }
 

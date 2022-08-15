@@ -6,18 +6,19 @@
 
 <h2>Yeni Blog Ekleme</h2>
 <br />
-<form class="form-group" method="post">
-    @Html.LabelFor(x => x.Baslik)
+@using (Html.BeginForm("YeniBlog", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.Label("Blog Başlığı")
     @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Tarih)
+    @Html.Label("Blog Oluşturulma Tarihi")
     @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.BlogImage)
+    @Html.Label("Blog Görselinin URL'si")
     @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Aciklama)
-    @Html.TextAreaFor(x => x.Aciklama,15,1, new { @class = "form-control" })
+    @Html.Label("Blog Yazısı")
+    @Html.TextAreaFor(x => x.Aciklama, 15, 1, new { @class = "form-control" })
     <br />
-    <button class="btn btn-primary">Blog Ekle</button>
-</form>
+    <button type="submit" class="btn btn-primary">Blog Ekle</button>
+}

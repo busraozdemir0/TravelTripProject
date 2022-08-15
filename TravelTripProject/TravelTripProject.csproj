@@ -52,10 +52,35 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=5.0.17.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Features.5.0.17\lib\net461\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.5.0.1\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -140,9 +165,20 @@
     <Compile Include="Migrations\202208141125009_mig_addadmin_column_email.designer.cs">
       <DependentUpon>202208141125009_mig_addadmin_column_email.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202208151222394_mig_add_file.cs" />
+    <Compile Include="Migrations\202208151222394_mig_add_file.designer.cs">
+      <DependentUpon>202208151222394_mig_add_file.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208151256116_mig1.cs" />
+    <Compile Include="Migrations\202208151256116_mig1.designer.cs">
+      <DependentUpon>202208151256116_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208151439483_mig_drop_formfile.cs" />
+    <Compile Include="Migrations\202208151439483_mig_drop_formfile.designer.cs">
+      <DependentUpon>202208151439483_mig_drop_formfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Siniflar\Admin.cs" />
-    <Compile Include="Models\Siniflar\AdresBlog.cs" />
     <Compile Include="Models\Siniflar\AnaSayfa.cs" />
     <Compile Include="Models\Siniflar\Blog.cs" />
     <Compile Include="Models\Siniflar\BlogYorum.cs" />
@@ -264,7 +300,7 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\YeniBlog.cshtml" />
-    <Content Include="Views\Admin\BlogGetir.cshtml" />
+    <Content Include="Views\Admin\BlogGuncelle.cshtml" />
     <Content Include="Views\Blog\YorumYap.cshtml" />
     <Content Include="Views\Admin\YorumListesi.cshtml" />
     <Content Include="Views\Admin\YorumGetir.cshtml" />
@@ -273,6 +309,7 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Login\Register.cshtml" />
     <Content Include="Views\Default\Contact.cshtml" />
+    <Content Include="Views\Admin\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -293,6 +330,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202208141125009_mig_addadmin_column_email.resx">
       <DependentUpon>202208141125009_mig_addadmin_column_email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208151222394_mig_add_file.resx">
+      <DependentUpon>202208151222394_mig_add_file.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208151256116_mig1.resx">
+      <DependentUpon>202208151256116_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208151439483_mig_drop_formfile.resx">
+      <DependentUpon>202208151439483_mig_drop_formfile.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

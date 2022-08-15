@@ -11,13 +11,13 @@
     @Html.LabelFor(x => x.ID)
     @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
     <br />
-    @Html.LabelFor(x => x.KullaniciAdi)
+    @Html.Label("Kullanıcı Adı")
     @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Mail)
+    @Html.Label("Mail")
     @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Yorum)
+    @Html.Label("Yorum")
     @Html.TextAreaFor(x => x.Yorum, 15, 1, new { @class = "form-control" })
     <br />
     <button class="btn btn-success">Yorum Güncelle</button>

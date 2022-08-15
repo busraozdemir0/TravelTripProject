@@ -20,27 +20,32 @@
                 <h3>İletişim</h3>
                 <p>Bize Ulaşın</p>
             </div>
+
             <div class="form">
                 <form class="cmxform" id="contactForm" method="post">
                     <div>
-                        <input type="text" class="textbox" value="Ad:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+                        <input type="text" class="textbox" placeholder="Ad Soyad" name="AdSoyad">
                     </div>
                     <div>
-                        <input type="text" class="textbox" value="E-Mail:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+                        <input type="text" class="textbox" placeholder="E-Mail" name="Mail">
                     </div>
                     <div>
-                        <input type="text" class="textbox" value="Konu:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+                        <input type="text" class="textbox" placeholder="Konu" name="Konu">
                     </div>
-                    <div>
-                        <p><span class="read">Gönder</span></p>
+                    <div class="form1">
+                        <form class="cmxform" id="contactForm" method="post">
+                            <div>
+                                <textarea placeholder="Mesaj" name="Mesaj"></textarea>
+                            </div>
+                            <div>
+                                <input type="submit" value="Gönder" />
+                            </div>
+                        </form>
                     </div>
                 </form>
             </div>
-            <div class="form1">
-                <div>
-                    <textarea value="Mesajınız:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message:</textarea>
-                </div>
-            </div>
+
+
             <div class="clear"></div>
             <div class="contact-bottom">
                 <div class="contact-left">
