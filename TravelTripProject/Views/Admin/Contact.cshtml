@@ -9,7 +9,7 @@
 <br />
 <table class="table table-bordered">
     <tr>
-        <th>ID</th>
+        <th class="hidden">ID</th>
         <th>Ad Soyad</th>
         <th>Mail</th>
         <th>Konu</th>
@@ -19,7 +19,7 @@
     @foreach (var x in Model)
     {
         <tr>
-            <td>@x.ID</td>
+            <td class="hidden">@x.ID</td>
             <td>@x.AdSoyad</td>
             <td>@x.Mail</td>
             <td>@x.Konu</td>
